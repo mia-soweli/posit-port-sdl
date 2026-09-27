@@ -516,4 +516,12 @@
 #define SDL_PLATFORM_HURD 1
 #endif
 
+#ifdef __plan9__
+
+/**
+ * A preprocessor macro that is only defined if compiling for Plan 9.
+ */
+#define SDL_PLATFORM_PLAN9 1
+#endif
+
 #endif /* SDL_platform_defines_h_ */
