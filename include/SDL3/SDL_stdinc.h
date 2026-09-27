@@ -130,6 +130,8 @@ typedef unsigned int uintptr_t;
 # pragma alloca
 #  elif defined(__MRC__)
 void *alloca(unsigned);
+#  elif defined(SDL_PLATFORM_PLAN9)
+#    define SDL_DISABLE_ALLOCA
 #  else
 void *alloca(size_t);
 #  endif
