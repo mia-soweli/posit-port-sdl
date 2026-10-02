@@ -493,6 +493,8 @@ SDL_IOStream *SDL_IOFromHandle(HANDLE handle, const char *mode, bool autoclose)
 
     return iostr;
 }
+#elif defined(SDL_PLATFORM_PLAN9)
+
 #else
 
 // Functions to read/write file descriptors. Not used for windows.
