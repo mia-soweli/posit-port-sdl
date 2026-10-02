@@ -41,6 +41,7 @@
 
 #define HAVE_LIBC 1
 
+#define HAVE_MALLOC 1
 #define HAVE_MEMSET 1
 #define HAVE_MEMCPY 1
 #define HAVE_MEMMOVE 1
