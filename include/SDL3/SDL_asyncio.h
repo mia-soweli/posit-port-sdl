@@ -123,6 +123,8 @@ extern "C" {
  */
 typedef struct SDL_AsyncIO SDL_AsyncIO;
 
+#pragma incomplete SDL_AsyncIO
+
 /**
  * Types of asynchronous I/O tasks.
  *
@@ -181,6 +183,8 @@ typedef struct SDL_AsyncIOOutcome
  * \sa SDL_WaitAsyncIOResult
  */
 typedef struct SDL_AsyncIOQueue SDL_AsyncIOQueue;
+
+#pragma incomplete SDL_AsyncIOQueue
 
 /**
  * Use this function to create a new SDL_AsyncIO object for reading from

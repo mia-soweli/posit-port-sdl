@@ -51,6 +51,8 @@ extern "C" {
  */
 typedef struct SDL_Tray SDL_Tray;
 
+#pragma incomplete SDL_Tray
+
 /**
  * An opaque handle representing a menu/submenu on a system tray object.
  *
@@ -58,12 +60,16 @@ typedef struct SDL_Tray SDL_Tray;
  */
 typedef struct SDL_TrayMenu SDL_TrayMenu;
 
+#pragma incomplete SDL_TrayMenu
+
 /**
  * An opaque handle representing an entry on a system tray object.
  *
  * \since This struct is available since SDL 3.2.0.
  */
 typedef struct SDL_TrayEntry SDL_TrayEntry;
+
+#pragma incomplete SDL_TrayEntry
 
 /**
  * Flags that control the creation of system tray entries.

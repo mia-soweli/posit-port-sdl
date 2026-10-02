@@ -89,6 +89,8 @@ typedef Uint32 SDL_MouseID;
  */
 typedef struct SDL_Cursor SDL_Cursor;
 
+#pragma incomplete SDL_Cursor
+
 /**
  * Cursor types for SDL_CreateSystemCursor().
  *

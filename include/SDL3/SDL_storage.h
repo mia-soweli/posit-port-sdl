@@ -331,6 +331,8 @@ SDL_COMPILE_TIME_ASSERT(SDL_StorageInterface_SIZE,
  */
 typedef struct SDL_Storage SDL_Storage;
 
+#pragma incomplete SDL_Storage
+
 /**
  * Opens up a read-only container for the application's filesystem.
  *

@@ -453,6 +453,7 @@ typedef struct SDL_AudioSpec
  */
 typedef struct SDL_AudioStream SDL_AudioStream;
 
+#pragma incomplete SDL_AudioStream
 
 /* Function prototypes */
 

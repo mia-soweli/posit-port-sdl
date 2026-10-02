@@ -30,6 +30,9 @@ typedef SDL_AudioStreamDataCompleteCallback SDL_ReleaseAudioBufferCallback;
 typedef struct SDL_AudioQueue SDL_AudioQueue;
 typedef struct SDL_AudioTrack SDL_AudioTrack;
 
+#pragma incomplete SDL_AudioQueue
+#pragma incomplete SDL_AudioTrack
+
 // Create a new audio queue
 extern SDL_AudioQueue *SDL_CreateAudioQueue(size_t chunk_size);
 

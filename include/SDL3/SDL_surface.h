@@ -152,6 +152,8 @@ struct SDL_Surface
 
 typedef struct SDL_Surface SDL_Surface;
 
+#pragma incomplete SDL_Surface
+
 /**
  * Allocate a new surface with a specific pixel format.
  *

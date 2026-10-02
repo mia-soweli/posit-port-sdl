@@ -101,6 +101,8 @@ typedef Uint32 SDL_CameraID;
  */
 typedef struct SDL_Camera SDL_Camera;
 
+#pragma incomplete SDL_Camera
+
 /**
  * The details of an output format for a camera device.
  *

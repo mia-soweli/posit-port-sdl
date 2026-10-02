@@ -70,6 +70,8 @@ extern "C" {
  */
 typedef struct SDL_Thread SDL_Thread;
 
+#pragma incomplete SDL_Thread
+
 /**
  * A unique numeric ID that identifies a thread.
  *

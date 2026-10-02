@@ -181,6 +181,8 @@ SDL_COMPILE_TIME_ASSERT(SDL_IOStreamInterface_SIZE,
  */
 typedef struct SDL_IOStream SDL_IOStream;
 
+#pragma incomplete SDL_IOStream
+
 
 /**
  *  \name IOFrom functions

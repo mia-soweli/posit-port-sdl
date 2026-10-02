@@ -35,6 +35,9 @@ typedef struct SDL_VideoData SDL_VideoData;
 typedef struct SDL_DisplayData SDL_DisplayData;
 typedef struct SDL_WindowData SDL_WindowData;
 
+#pragma incomplete SDL_VideoData
+#pragma incomplete SDL_VideoDevice
+
 typedef struct
 {
     float SDR_white_level;

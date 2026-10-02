@@ -97,6 +97,8 @@ extern "C" {
  */
 typedef struct SDL_HashTable SDL_HashTable;
 
+#pragma incomplete SDL_HashTable
+
 /**
  * A function pointer representing a hash table hashing callback.
  *

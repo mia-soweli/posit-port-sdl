@@ -295,6 +295,8 @@ extern "C" {
  */
 typedef struct SDL_Mutex SDL_Mutex;
 
+#pragma incomplete SDL_Mutex
+
 /**
  * Create a new mutex.
  *
@@ -436,6 +438,8 @@ extern SDL_DECLSPEC void SDLCALL SDL_DestroyMutex(SDL_Mutex *mutex);
  * \since This struct is available since SDL 3.2.0.
  */
 typedef struct SDL_RWLock SDL_RWLock;
+
+#pragma incomplete SDL_RWLock
 
 /**
  * Create a new read/write lock.
@@ -683,6 +687,8 @@ extern SDL_DECLSPEC void SDLCALL SDL_DestroyRWLock(SDL_RWLock *rwlock);
  */
 typedef struct SDL_Semaphore SDL_Semaphore;
 
+#pragma incomplete SDL_Semaphore
+
 /**
  * Create a semaphore.
  *
@@ -839,6 +845,8 @@ extern SDL_DECLSPEC Uint32 SDLCALL SDL_GetSemaphoreValue(SDL_Semaphore *sem);
  * \since This struct is available since SDL 3.2.0.
  */
 typedef struct SDL_Condition SDL_Condition;
+
+#pragma incomplete SDL_Condition
 
 /**
  * Create a condition variable.

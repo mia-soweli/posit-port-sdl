@@ -160,6 +160,8 @@ typedef enum SDL_SystemTheme
  */
 typedef struct SDL_DisplayModeData SDL_DisplayModeData;
 
+#pragma incomplete SDL_DisplayModeData
+
 /**
  * The structure that defines a display mode.
  *
@@ -208,6 +210,8 @@ typedef enum SDL_DisplayOrientation
  * \sa SDL_CreateWindow
  */
 typedef struct SDL_Window SDL_Window;
+
+#pragma incomplete SDL_Window
 
 /**
  * The flags on a window.

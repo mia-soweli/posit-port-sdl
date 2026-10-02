@@ -70,6 +70,8 @@ extern "C" {
  */
 typedef struct SDL_hid_device SDL_hid_device;
 
+#pragma incomplete SDL_hid_device
+
 /**
  * HID underlying bus types.
  *
