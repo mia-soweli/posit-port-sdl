@@ -158,6 +158,8 @@ extern "C" {
     #define SDL_TriggerBreakpoint() __builtin_trap()  /* older gcc may not support SDL_HAS_BUILTIN(__builtin_trap) above */
 #elif defined(__386__) && defined(__WATCOMC__)
     #define SDL_TriggerBreakpoint() { _asm { int 0x03 } }
+#elif defined(__plan9__)
+    #define SDL_TriggerBreakpoint() { abort(); }
 #elif defined(HAVE_SIGNAL_H) && !defined(__WATCOMC__)
     #include <signal.h>
     #define SDL_TriggerBreakpoint() raise(SIGTRAP)
