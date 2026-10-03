@@ -1,7 +1,7 @@
 </$objtype/mkfile
 
 AFLAGS=
-CFLAGS=$CFLAGS -p -D __plan9__ -I ../../unix/include -I include -I include/build_config -I src
+CFLAGS=$CFLAGS -p -D __plan9__ -I ../../posit/include/posit -I ../../posit/include -I include -I include/build_config -I src
 YFLAGS=
 
 OFILES=\
@@ -87,6 +87,7 @@ OFILES=\
 	src/loadso/dummy/SDL_sysloadso.$O\
 	src/main/SDL_main_callbacks.$O\
 	src/main/SDL_runapp.$O\
+	src/main/generic/SDL_sysmain_callbacks.$O\
 	src/notification/SDL_notification.$O\
 	src/notification/dummy/SDL_dummynotification.$O\
 	src/render/SDL_render.$O\
