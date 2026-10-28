@@ -158,6 +158,9 @@ static VideoBootStrap *bootstrap[] = {
 #ifdef SDL_VIDEO_DRIVER_OPENVR
     &OPENVR_bootstrap,
 #endif
+#ifdef SDL_VIDEO_DRIVER_PLAN9
+    &PLAN9_bootstrap,
+#endif
     NULL
 };
 

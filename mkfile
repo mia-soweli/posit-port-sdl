@@ -150,9 +150,8 @@ OFILES=\
 	src/video/SDL_video_unsupported.$O\
 	src/video/SDL_vulkan_utils.$O\
 	src/video/SDL_yuv.$O\
-	src/video/dummy/SDL_nullevents.$O\
-	src/video/dummy/SDL_nullframebuffer.$O\
-	src/video/dummy/SDL_nullvideo.$O\
+	src/video/plan9/SDL_plan9video.$O\
+	src/video/plan9/SDL_plan9events.$O\
 	src/video/yuv2rgb/yuv_rgb_std.$O\
 
 LIB=libSDL3.a
