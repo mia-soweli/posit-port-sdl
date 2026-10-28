@@ -1,7 +1,7 @@
 </$objtype/mkfile
 
 AFLAGS=
-CFLAGS=$CFLAGS -p -D __plan9__ -I ../../posit/include/posit -I ../../posit/include -I include -I include/build_config -I src
+CFLAGS=$CFLAGS -p -D __plan9__ -I ../posit/include/posit -I ../posit/include -I include -I include/build_config -I src
 YFLAGS=
 
 OFILES=\
