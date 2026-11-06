@@ -493,9 +493,8 @@ SDL_IOStream *SDL_IOFromHandle(HANDLE handle, const char *mode, bool autoclose)
 
     return iostr;
 }
-#elif defined(SDL_PLATFORM_PLAN9)
 
-#else
+#elif !defined(SDL_PLATFORM_PLAN9)
 
 // Functions to read/write file descriptors. Not used for windows.
 
@@ -692,7 +691,7 @@ SDL_IOStream *SDL_IOFromFD(int fd, bool autoclose)
 }
 #endif // SDL_PLATFORM_WINDOWS && !SDL_PLATFORM_CYGWIN
 
-#if defined(HAVE_STDIO_H) && !(defined(SDL_PLATFORM_WINDOWS) && !defined(SDL_PLATFORM_CYGWIN))
+#if defined(HAVE_STDIO_H) && !(defined(SDL_PLATFORM_WINDOWS) && !defined(SDL_PLATFORM_CYGWIN)) && !defined(SDL_PLATFORM_PLAN9)
 
 // Functions to read/write stdio file pointers. Not used for windows.
 
@@ -1000,7 +999,7 @@ static bool mem_setioprops(SDL_PropertiesID props, void *userdata)
 // Functions to create SDL_IOStream structures from various data sources
 
 // private platforms might define SKIP_STDIO_DIR_TEST in their build configs, too.
-#if (defined(SDL_PLATFORM_WINDOWS) && !defined(SDL_PLATFORM_CYGWIN)) || defined(SDL_PLATFORM_EMSCRIPTEN)
+#if (defined(SDL_PLATFORM_WINDOWS) && !defined(SDL_PLATFORM_CYGWIN)) || defined(SDL_PLATFORM_EMSCRIPTEN) || defined(SDL_PLATFORM_PLAN9)
 #define SKIP_STDIO_DIR_TEST 1
 #endif
 
@@ -1175,7 +1174,7 @@ SDL_IOStream *SDL_IOFromFile(const char *file, const char *mode)
         iostr = SDL_IOFromHandle(handle, mode, true);
     }
 
-#elif defined(HAVE_STDIO_H)
+#elif defined(HAVE_STDIO_H) && !defined(SDL_PLATFORM_PLAN9)
     {
         #if defined(SDL_PLATFORM_3DS)
         FILE *fp = N3DS_FileOpen(file, mode);
