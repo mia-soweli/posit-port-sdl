@@ -29,9 +29,12 @@
  * C Library Headers
  */
 
+#define HAVE_LIMITS_H
 #define HAVE_STDARG_H
 #define HAVE_STDDEF_H
 #define HAVE_STDINT_H
+#define HAVE_STDIO_H
+#define HAVE_STDLIB_H
 #define HAVE_STRING_H
 #define HAVE_WCHAR_H
 
