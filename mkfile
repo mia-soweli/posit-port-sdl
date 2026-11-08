@@ -2,7 +2,6 @@
 
 AFLAGS=
 CFLAGS=$CFLAGS -p -D __plan9__ -I ../posit/include/posit -I ../posit/include -I include -I include/build_config -I src
-YFLAGS=
 
 OFILES=\
 	src/SDL.$O\
@@ -124,7 +123,7 @@ OFILES=\
 	src/thread/generic/SDL_systhread.$O\
 	src/thread/generic/SDL_systls.$O\
 	src/timer/SDL_timer.$O\
-	src/timer/plan9/SDL_systimer.$O\
+	src/timer/unix/SDL_systimer.$O\
 	src/tray/SDL_tray_utils.$O\
 	src/tray/dummy/SDL_tray.$O\
 	src/video/SDL_RLEaccel.$O\
@@ -152,9 +151,11 @@ OFILES=\
 	src/video/SDL_yuv.$O\
 	src/video/plan9/SDL_plan9video.$O\
 	src/video/plan9/SDL_plan9events.$O\
+	src/video/plan9/SDL_plan9window.$O\
+	src/video/plan9/SDL_plan9windowframebuffer.$O\
 	src/video/yuv2rgb/yuv_rgb_std.$O\
 
-LIB=libSDL3.a
+LIB=/$objtype/lib/libSDL3.a
 LIBOBJ=${OFILES:%=$LIB(%)}
 LIBDIR=.
 
@@ -171,5 +172,5 @@ $LIB(%.$O):N:	%.$O
 %.$O:	%.s
 	$AS $AFLAGS -o $target $stem.s
 
-y.tab.h y.tab.c:	$YFILES
-	yacc $YFLAGS $prereq
+clean:V:
+	rm -r src/*.[$OS] src/*/*.[$OS] src/*/*/*.[$OS]
